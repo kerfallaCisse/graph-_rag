@@ -1,0 +1,19 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wine: <http://www.ontotext.com/example/wine#> .
+
+wine:Blanquito a wine:WhiteWine,
+        wine:Wine ;
+    rdfs:label "Blanquito" ;
+    wine:countryOfOrigin "USA" ;
+    wine:foodPairing "Ideal with seafood, poultry, and creamy pasta dishes." ;
+    wine:hasSugar "dry" ;
+    wine:hasWinery "In vino veritas" ;
+    wine:hasYear "2012" ;
+    wine:madeFromGrape wine:Chardonnay ;
+    wine:tastingNotes "Crisp and clean, with notes of green apple, citrus, and a touch of oak." ;
+    rdfs:comment "A very good wine, loved for its crispness and well-balanced acidity." .
+
+wine:Chardonnay a wine:Grape ;
+    rdfs:label "Chardonnay" ;
+    rdfs:comment "Chardonnay is a popular white grape that can produce a wide variety of styles, from buttery to crisp and mineral-driven wines." .
+

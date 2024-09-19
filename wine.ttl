@@ -1,0 +1,105 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix wine: <http://www.ontotext.com/example/wine#> .
+
+# Wine Types
+wine:RedWine rdfs:subClassOf wine:Wine ;
+   rdfs:label "Red Wine" ;
+   rdfs:comment "Red wines are made from dark-colored grape varieties and are known for their bold flavors and rich texture." .
+
+wine:WhiteWine rdfs:subClassOf wine:Wine ;
+   rdfs:label "White Wine" ;
+   rdfs:comment "White wines are typically lighter and crisper, made from green or yellowish grapes, offering fresh and fruity flavors." .
+
+wine:RoseWine rdfs:subClassOf wine:Wine ;
+   rdfs:label "Rose Wine" ;
+   rdfs:comment "Rose wines are a blend of red and white wine-making techniques, resulting in a pink-hued wine with delicate fruity flavors." .
+
+# Grapes
+wine:Merlo
+    rdf:type wine:Grape ;
+    rdfs:label "Merlo" ;
+    rdfs:comment "Merlot is a smooth and versatile grape variety with flavors ranging from fruity plum to deeper chocolate notes." .
+
+wine:CabernetSauvignon
+    rdf:type wine:Grape ;
+    rdfs:label "Cabernet Sauvignon" ;
+    rdfs:comment "Cabernet Sauvignon is a full-bodied grape known for its high tannins and flavors of dark fruits and spices." .
+
+wine:CabernetFranc
+    rdf:type wine:Grape ;
+    rdfs:label "Cabernet Franc" ;
+    rdfs:comment "Cabernet Franc is a medium-bodied grape, often used in blends, with peppery and floral aromas." .
+
+wine:PinotNoir
+    rdf:type wine:Grape ;
+    rdfs:label "Pinot Noir" ;
+    rdfs:comment "Pinot Noir is a light-bodied grape known for its red fruit flavors, soft tannins, and smooth finish." .
+
+wine:Chardonnay
+    rdf:type wine:Grape ;
+    rdfs:label "Chardonnay" ;
+    rdfs:comment "Chardonnay is a popular white grape that can produce a wide variety of styles, from buttery to crisp and mineral-driven wines." .
+
+# Wines
+wine:Yoyowine
+    rdf:type wine:RedWine ;
+    wine:madeFromGrape wine:CabernetSauvignon ;
+    wine:hasSugar "dry" ;
+    wine:hasYear "2013"^^xsd:integer ;
+    wine:hasWinery "Semantinos" ;
+    wine:countryOfOrigin "France" ;
+    wine:tastingNotes "Bold and structured, with flavors of blackcurrant, tobacco, and a hint of vanilla." ;
+    wine:foodPairing "Perfect with grilled steak, roasted lamb, or aged cheddar." ;
+    rdfs:label "Yoyowine" ;
+    rdfs:comment "A very good wine, appreciated for its bold structure and complexity." .
+
+wine:Franvino
+    rdf:type wine:RedWine ;
+    wine:madeFromGrape wine:Merlo ;
+    wine:madeFromGrape wine:CabernetFranc ;
+    wine:hasSugar "dry" ;
+    wine:hasYear "2012"^^xsd:integer ;
+    wine:hasWinery "Semantinos" ;
+    wine:countryOfOrigin "Italy" ;
+    wine:tastingNotes "Soft and fruity with plum and berry notes, balanced by earthy undertones." ;
+    wine:foodPairing "Pairs well with roasted duck, mushroom dishes, and soft cheeses." ;
+    rdfs:label "Franvino" ;
+    rdfs:comment "Half good, with a pleasant fruity finish but lacks complexity." .
+
+wine:Noirette
+    rdf:type wine:RedWine ;
+    wine:madeFromGrape wine:PinotNoir ;
+    wine:hasSugar "medium" ;
+    wine:hasYear "2012"^^xsd:integer ;
+    wine:hasWinery "In vino veritas" ;
+    wine:countryOfOrigin "New Zealand" ;
+    wine:tastingNotes "Delicate and smooth, with cherry, raspberry, and subtle earthy notes." ;
+    wine:foodPairing "Excellent with salmon, roast chicken, or mushroom risotto." ;
+    rdfs:label "Noirette" ;
+    rdfs:comment "A good wine, praised for its smooth texture and balanced flavors." .
+
+wine:Blanquito
+    rdf:type wine:WhiteWine ;
+    wine:madeFromGrape wine:Chardonnay ;
+    wine:hasSugar "dry" ;
+    wine:hasYear "2012"^^xsd:integer ;
+    wine:hasWinery "In vino veritas" ;
+    wine:countryOfOrigin "USA" ;
+    wine:tastingNotes "Crisp and clean, with notes of green apple, citrus, and a touch of oak." ;
+    wine:foodPairing "Ideal with seafood, poultry, and creamy pasta dishes." ;
+    rdfs:label "Blanquito" ;
+    rdfs:comment "A very good wine, loved for its crispness and well-balanced acidity." .
+
+wine:Rozova
+    rdf:type wine:RoseWine ;
+    wine:madeFromGrape wine:PinotNoir ;
+    wine:hasSugar "medium" ;
+    wine:hasYear "2013"^^xsd:integer ;
+    wine:hasWinery "In vino veritas" ;
+    wine:countryOfOrigin "Spain" ;
+    wine:tastingNotes "Light and refreshing with strawberry, melon, and rose petal flavors." ;
+    wine:foodPairing "Pairs wonderfully with grilled vegetables, seafood, and light salads." ;
+    rdfs:label "Rozova" ;
+    rdfs:comment "A good wine, refreshing and easy to drink, but could use more depth." .
