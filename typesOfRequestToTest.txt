@@ -1,0 +1,9 @@
+Exploratory query :
+This type of query focuses on exploring the dataset to uncover hidden patterns, connections, or properties about wines, grapes, or wineries.
+
+Query : What are the key characteristics of wines produced by the winery "In vino veritas" in different countries?
+
+Connecting the dots :
+This query requires linking different pieces of information to generate an answer that spans multiple entities or classes in the knowledge graph.
+
+Query : Which grape varieties are used to make dry wines, and what are the typical food pairings for these wines?

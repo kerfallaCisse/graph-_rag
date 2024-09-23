@@ -10,12 +10,12 @@ services:
     volumes:
       - ./data:/opt/graphdb/home
 
-  frontback:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: frontback
-    ports:
-      - "8501:8501"
-    env_file:
-      - .env
+  # frontback:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   container_name: frontback
+  #   ports:
+  #     - "8501:8501"
+  #   env_file:
+  #     - .env

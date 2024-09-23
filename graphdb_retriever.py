@@ -14,7 +14,7 @@ from rdflib import Graph
 from rdflib.namespace import NamespaceManager
 from rdflib import Namespace
 from pyvis.network import Network
-# load_dotenv(find_dotenv())
+load_dotenv(find_dotenv())
 
 
 SUBGRAPH_RESPONSE = []
@@ -33,6 +33,8 @@ class GraphRAGRetriever(BaseRetriever):
         # Building SPARQL query for relevant documents
         endpoint = self.url + self.repo
         sparql_endpoint = SPARQLWrapper2(endpoint)
+
+        # Il faut récupérer pour les 2 types de questions : exploratory question and connecting the dots
 
         relevant_query_entities = f"""
         PREFIX :<http://www.ontotext.com/graphdb/similarity/>
@@ -221,6 +223,8 @@ def create_rdf_subgraph():
         subj_str = strip_prefix_from_uri(s)
         pred_str = strip_prefix_from_uri(p)
         obj_str = strip_prefix_from_uri(o)
+
+        # Au moment où je génère le graph, éviter que ça aille sur le même noeud (le noeud se point vers lui-même)
 
         net.add_node(subj_str, label=subj_str, title=subj_str)
         net.add_node(obj_str, label=obj_str, title=obj_str)
